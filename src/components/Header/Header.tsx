@@ -6,7 +6,7 @@ const Header = (): JSX.Element => {
       <img
         className="header-icon"
         src="/images/ISDEEPWEB.svg"
-        alt="r2d2 icon"
+        alt="Isdeepweb logo"
         width="320"
         height="285.60"
       />
