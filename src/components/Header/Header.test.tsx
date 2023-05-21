@@ -7,7 +7,7 @@ import Header from "./Header";
 
 describe("Given a Header component", () => {
   describe("When it is rendered", () => {
-    test.only("Then it should show a title with the text 'ISDEEPWEB'", () => {
+    test("Then it should show a title with the text 'ISDEEPWEB'", () => {
       const titleText = "ISDEEPWEB";
 
       render(
