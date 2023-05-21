@@ -3,6 +3,7 @@ import styled from "styled-components";
 const LoginFormStyled = styled.form`
   display: flex;
   flex-direction: column;
+  min-width: 300px;
   margin: 10px;
   gap: 30px;
 
@@ -13,7 +14,7 @@ const LoginFormStyled = styled.form`
     border: none;
     border-radius: 5px;
     font-family: inherit;
-    font-size: 15px;
+    font-size: ${(prop) => prop.theme.fontSizes.medium};
     background: linear-gradient(
         350deg,
         rgba(72, 121, 37, 0.8),
@@ -32,7 +33,7 @@ const LoginFormStyled = styled.form`
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 15px;
-    font-size: 20px;
+    font-size: ${(prop) => prop.theme.fontSizes.regular};
     font-family: inherit;
     background: linear-gradient(
       182deg,
