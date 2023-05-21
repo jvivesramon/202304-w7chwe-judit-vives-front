@@ -1,6 +1,6 @@
 import LoginForm from "../../LoginForm/LoginForm";
 
-const HomePage = (): JSX.Element => {
+const LoginPage = (): JSX.Element => {
   return (
     <>
       <img
@@ -16,4 +16,4 @@ const HomePage = (): JSX.Element => {
   );
 };
 
-export default HomePage;
+export default LoginPage;
