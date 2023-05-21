@@ -1,12 +1,10 @@
-import Header from "../Header/Header";
-import LoginForm from "../LoginForm/LoginForm";
+import Layout from "../Layout/Layout";
 
 const App = (): JSX.Element => {
   return (
-    <div className="main-container">
-      <Header />
-      <LoginForm />
-    </div>
+    <>
+      <Layout />
+    </>
   );
 };
 
