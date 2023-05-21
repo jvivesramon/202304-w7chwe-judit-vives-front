@@ -1,22 +1,27 @@
 import { useState } from "react";
 import LoginFormStyled from "./LoginFormStyled";
+import useUser from "../../hooks/useUser";
 
 const LoginForm = (): JSX.Element => {
   const initialState = { username: "", password: "" };
-  const [login, setLogin] = useState(initialState);
+  const [loginData, setLoginData] = useState(initialState);
+
+  const { getUserToken } = useUser();
 
   const onChangeRegister = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setLogin({
-      ...login,
+    setLoginData({
+      ...loginData,
       [event.target.id]: event.target.value,
     });
   };
 
-  const isValidForm = login.username !== "" && login.password !== "";
+  const isValidForm = loginData.username !== "" && loginData.password !== "";
 
   const handleSubmit = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
-    setLogin(initialState);
+    setLoginData(initialState);
+
+    await getUserToken(loginData);
   };
 
   return (
@@ -30,14 +35,14 @@ const LoginForm = (): JSX.Element => {
         className="form-container__input"
         type="text"
         id="username"
-        value={login.username}
+        value={loginData.username}
         onChange={onChangeRegister}
       />
       <input
         placeholder="password:"
         type="password"
         className="form-container__input"
-        value={login.password}
+        value={loginData.password}
         id="password"
         onChange={onChangeRegister}
       />

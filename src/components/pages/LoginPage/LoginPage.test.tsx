@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
-import HomePage from "./HomePage";
+import LoginPage from "./LoginPage";
 import { store } from "../../../store";
 import theme from "../../../styles/theme/theme";
 
@@ -13,7 +13,7 @@ describe("Given a HomePage component", () => {
       render(
         <ThemeProvider theme={theme}>
           <Provider store={store}>
-            <HomePage />
+            <LoginPage />
           </Provider>
         </ThemeProvider>
       );
@@ -31,7 +31,7 @@ describe("Given a HomePage component", () => {
       render(
         <ThemeProvider theme={theme}>
           <Provider store={store}>
-            <HomePage />
+            <LoginPage />
           </Provider>
         </ThemeProvider>
       );
