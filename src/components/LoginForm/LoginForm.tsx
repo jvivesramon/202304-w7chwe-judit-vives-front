@@ -1,5 +1,5 @@
 import { useState } from "react";
-import LoginFormStyled from "./loginFormStyled.js";
+import LoginFormStyled from "./LoginFormStyled";
 
 const LoginForm = (): JSX.Element => {
   const initialState = { username: "", password: "" };
