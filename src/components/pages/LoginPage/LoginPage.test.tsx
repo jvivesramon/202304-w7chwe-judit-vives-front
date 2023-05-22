@@ -1,22 +1,13 @@
-import { render, screen } from "@testing-library/react";
-import { ThemeProvider } from "styled-components";
-import { Provider } from "react-redux";
+import { screen } from "@testing-library/react";
 import LoginPage from "./LoginPage";
-import { store } from "../../../store";
-import theme from "../../../styles/theme/theme";
+import { renderWithProviders } from "../../../testUtils/testUtils";
 
-describe("Given a HomePage component", () => {
+describe("Given a LoginPage component", () => {
   describe("When it is rendered", () => {
     test("Then it should show an image with the text 'Isdeepweb logo'", () => {
       const imageText = "Isdeepweb logo";
 
-      render(
-        <ThemeProvider theme={theme}>
-          <Provider store={store}>
-            <LoginPage />
-          </Provider>
-        </ThemeProvider>
-      );
+      renderWithProviders(<LoginPage />);
 
       const heading = screen.getByRole("img", {
         name: imageText,
@@ -25,16 +16,10 @@ describe("Given a HomePage component", () => {
       expect(heading).toBeInTheDocument();
     });
 
-    test("Then it should show a text 'Once you are in, you will stay forever'", () => {
-      const text = "Once you are in, you will stay forever";
+    test("Then it should show a text 'Trust the method'", () => {
+      const text = "Trust the method";
 
-      render(
-        <ThemeProvider theme={theme}>
-          <Provider store={store}>
-            <LoginPage />
-          </Provider>
-        </ThemeProvider>
-      );
+      renderWithProviders(<LoginPage />);
 
       const heading = screen.getByRole("heading", {
         name: text,

@@ -18,7 +18,7 @@ describe("Given a LoginForm component", () => {
       render(
         <ThemeProvider theme={theme}>
           <Provider store={store}>
-            <LoginForm />
+            <LoginForm actionOnClick={() => ""} />
           </Provider>
         </ThemeProvider>
       );
@@ -34,7 +34,7 @@ describe("Given a LoginForm component", () => {
       render(
         <ThemeProvider theme={theme}>
           <Provider store={store}>
-            <LoginForm />
+            <LoginForm actionOnClick={() => ""} />
           </Provider>
         </ThemeProvider>
       );
@@ -50,7 +50,7 @@ describe("Given a LoginForm component", () => {
       render(
         <ThemeProvider theme={theme}>
           <Provider store={store}>
-            <LoginForm />
+            <LoginForm actionOnClick={() => ""} />
           </Provider>
         </ThemeProvider>
       );
@@ -74,7 +74,7 @@ describe("Given a LoginForm component", () => {
       render(
         <ThemeProvider theme={theme}>
           <Provider store={store}>
-            <LoginForm />
+            <LoginForm actionOnClick={() => ""} />
           </Provider>
         </ThemeProvider>
       );
@@ -90,7 +90,7 @@ describe("Given a LoginForm component", () => {
       render(
         <ThemeProvider theme={theme}>
           <Provider store={store}>
-            <LoginForm />
+            <LoginForm actionOnClick={() => ""} />
           </Provider>
         </ThemeProvider>
       );
