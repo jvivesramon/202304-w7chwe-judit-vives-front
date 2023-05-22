@@ -23,8 +23,9 @@ const LoginFormStyled = styled.form`
       linear-gradient(182deg, rgb(95 172 29 / 80%), rgba(0, 255, 0, 0) 70.71%),
       linear-gradient(336deg, rgba(23, 23, 37, 0.8), rgba(0, 0, 255, 0) 70.71%);
     ::placeholder {
-      color: #d4d3d3;
+      color: #e8e8e8;
     }
+    color: #ffffff;
   }
 
   .form-container__button {
