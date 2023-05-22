@@ -8,8 +8,8 @@ import { store } from "../../store";
 
 describe("Given a appRouter", () => {
   describe("When it redirects to HomePage", () => {
-    test("It should render a heading with the text 'Once you are in, you will stay forever'", () => {
-      const headingText = "Once you are in, you will stay forever";
+    test("It should render a heading with the text 'Trust the method'", () => {
+      const headingText = "Trust the method";
 
       render(
         <ThemeProvider theme={theme}>

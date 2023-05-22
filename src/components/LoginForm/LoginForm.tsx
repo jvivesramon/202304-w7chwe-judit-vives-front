@@ -1,12 +1,14 @@
 import { useState } from "react";
 import LoginFormStyled from "./LoginFormStyled";
-import useUser from "../../hooks/useUser/useUser";
+import { UserDataCredentials } from "../../types";
 
-const LoginForm = (): JSX.Element => {
+interface LoginFormProps {
+  actionOnClick: (userData: UserDataCredentials) => void;
+}
+
+const LoginForm = ({ actionOnClick }: LoginFormProps): JSX.Element => {
   const initialState = { username: "", password: "" };
   const [loginData, setLoginData] = useState(initialState);
-
-  const { getUserToken } = useUser();
 
   const onChangeRegister = (event: React.ChangeEvent<HTMLInputElement>) => {
     setLoginData({
@@ -17,17 +19,17 @@ const LoginForm = (): JSX.Element => {
 
   const isValidForm = loginData.username !== "" && loginData.password !== "";
 
-  const handleSubmit = async (event: { preventDefault: () => void }) => {
+  const handleOnClick = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
     setLoginData(initialState);
 
-    await getUserToken(loginData);
+    actionOnClick(loginData);
   };
 
   return (
     <LoginFormStyled
       autoComplete="off"
-      onSubmit={handleSubmit}
+      onSubmit={handleOnClick}
       className="form-container"
     >
       <input
