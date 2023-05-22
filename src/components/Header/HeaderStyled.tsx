@@ -11,7 +11,7 @@ const HeaderStyled = styled.header`
     font-family: inherit;
     color: #d4d3d3;
     box-shadow: 0px 0px 20px black;
-    font-size: 30px;
+    font-size: 35px;
   }
 `;
 
