@@ -12,7 +12,7 @@ const useUser = () => {
     const {
       data: { token },
     } = await axios.post<{ token: string }>(`${apiUrl}/user/login`, userData);
-    localStorage.setItem("token", token);
+
     return token;
   };
   return { getUserToken };
