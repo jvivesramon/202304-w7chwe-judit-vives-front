@@ -15,14 +15,18 @@ const LoginPage = (): JSX.Element => {
   const navigate = useNavigate();
 
   const handleOnSubmit = async (userDataCredentials: UserDataCredentials) => {
-    const token = await getUserToken(userDataCredentials);
+    try {
+      const token = await getUserToken(userDataCredentials);
 
-    if (token) {
-      const userData = getTokenData(token);
+      if (token) {
+        const userData = getTokenData(token);
 
-      dispatch(loginUserActionCreator(userData));
-      setToken("token", token);
-      navigate("/contacts", { replace: true });
+        dispatch(loginUserActionCreator(userData));
+        setToken("token", token);
+        navigate("/contacts", { replace: true });
+      }
+    } catch {
+      return;
     }
   };
 
