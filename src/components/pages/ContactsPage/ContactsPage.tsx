@@ -4,7 +4,7 @@ const ContactsPage = (): JSX.Element => {
   return (
     <>
       <h2 className="contacts-title">ALL THE SUBJECTS TO THE ORDER</h2>
-      <UserCard name="MARIO" />
+      <UserCard name="MARIOUS" />
     </>
   );
 };
