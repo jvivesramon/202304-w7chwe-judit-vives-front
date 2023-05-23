@@ -15,3 +15,11 @@ html {
   box-shadow: 0px 0px 20px black;
   font-size: 16px;
 }
+
+.contacts-title {
+  margin: 60px;
+  font-family: inherit;
+  color: #53f037;
+  box-shadow: 0px 0px 20px black;
+  font-size: 25px;
+}

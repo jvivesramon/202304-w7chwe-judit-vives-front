@@ -3,8 +3,8 @@ import UserCard from "../../userCard/UserCard";
 const ContactsPage = (): JSX.Element => {
   return (
     <>
-      <h1>OS ODIO A TODOS</h1>
-      <UserCard img="" name="" />
+      <h2 className="contacts-title">ALL THE SUBJECTS TO THE ORDER</h2>
+      <UserCard name="MARIO" />
     </>
   );
 };
